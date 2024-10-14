@@ -1,4 +1,5 @@
 package com.m196.projects;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.Location;
@@ -55,15 +56,10 @@ import java.util.logging.Logger;
 public final class plugin extends JavaPlugin implements CommandExecutor{
     private Logger logg = Bukkit.getLogger();
     @Override
-    public void onLoad()
-    {
-        logg.info("m196 style commands loaded successfully!!!!!");
-    }
-    @Override
     public void onEnable()
     {
         logg.info("m196 STYLE COMMANDS IS NOW ONLINE!!!!");
-        this.getCommand("dropanvil").setExecutor(new DropAnvilExcecuter());
+        this.getCommand("dropanvil").setExecutor(new DropAnvilExecuter());
     }
     @Override
     public void onDisable()
@@ -71,7 +67,6 @@ public final class plugin extends JavaPlugin implements CommandExecutor{
         logg.info("Now shutting down!");
         logg.info("Bye bye!");
     }
-    
     public void runMinecraftCommand(String command, CommandSender sender)
     {
         Bukkit.dispatchCommand(sender, command);
@@ -79,9 +74,9 @@ public final class plugin extends JavaPlugin implements CommandExecutor{
 
     public void dropAnvilHandler(CommandSender sender)
     {
-        runMinecraftCommand("say dropanvil was requested!", sender);
+        sender.sendMessage("say dropanvil was requested!");
     }
-    public class DropAnvilExcecuter implements CommandExecutor{
+    public class DropAnvilExecuter implements CommandExecutor{
         @Override
         public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
         {

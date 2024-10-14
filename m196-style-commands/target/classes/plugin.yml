@@ -1,11 +1,8 @@
 name: m196stylecommands
-version: 1.0-alpha
+version: 1.1-alpha
 main: com.m196.projects
 api-version: 1.21
 commands:
   dropanvil:
-    description: "drop an anvil on a player :)"
-    usage: "/dropanvil <player>"
-  adminwand:
-    description: "give a player an admin wand"
-    usage: "/adminwand"
+    description: "drop an anvil on a player :) [under construction]"
+    usage: "/dropanvil"
