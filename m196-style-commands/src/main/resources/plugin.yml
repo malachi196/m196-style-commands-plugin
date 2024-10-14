@@ -1,5 +1,5 @@
 name: m196stylecommands
-version: 1.1-alpha
+version: 1.2-alpha
 main: com.m196.projects
 api-version: 1.21
 commands:
