@@ -1,8 +1,0 @@
-name: m196stylecommands
-version: 1.2-alpha
-main: com.m196.projects
-api-version: 1.21
-commands:
-  dropanvil:
-    description: "drop an anvil on a player :) [under construction]"
-    usage: "/dropanvil"
