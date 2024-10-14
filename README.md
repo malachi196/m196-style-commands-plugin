@@ -1,2 +1,6 @@
 # m196 style commands
-Useful commands I programmed for minecraft bukkit and spigot.
+Useful commands  programmed for minecraft bukkit and spigot.
+
+## colaboraters:
++ @malachi196 (owner)
++ @mas6y6
