@@ -4,5 +4,5 @@ Latest "m196-style-commands-\<version\>.jar" download is in the [target folder](
 
 
 ## colaboraters:
-+ @malachi196 (owner)
-+ @mas6y6
++ [@malachi196](https://github.com/malachi196) (owner)
++ [@mas6y6](https://github.com/mas6y6)
