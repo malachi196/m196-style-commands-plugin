@@ -1,4 +1,4 @@
-package com.m196.projects;
+package src.main.java.com.m196.projects;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -50,41 +50,22 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
-//to build da jar run 'mvn clean package' to make da jar file
-//run 'java -ea m196-style-commands\src\main\java\com\m196\projects\Test.java' to excecute da code!
 
-public final class m196stylecommands extends JavaPlugin implements CommandExecutor{
+import src.main.java.com.m196.projects.commands.dropanvil;
+//to build da jar run 'mvn clean package' to make da jar file
+
+public final class m196stylecommands extends JavaPlugin{
     private Logger logg = Bukkit.getLogger();
     @Override
     public void onEnable()
     {
         logg.info("m196 STYLE COMMANDS IS NOW ONLINE!!!!");
-        this.getCommand("dropanvil").setExecutor(new DropAnvilExecuter());
+        this.getCommand("dropanvil").setExecutor(new dropanvil());
     }
     @Override
     public void onDisable()
     {
         logg.info("Now shutting down!");
         logg.info("Bye bye!");
-    }
-    public void runMinecraftCommand(String command, CommandSender sender)
-    {
-        Bukkit.dispatchCommand(sender, command);
-    }
-
-    public void dropAnvilHandler(CommandSender sender)
-    {
-        sender.sendMessage("dropanvil was requested!"); //This sends a message to the player
-    }
-    public class DropAnvilExecuter implements CommandExecutor{
-        @Override
-        public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
-        {
-            if (cmd.getName().equalsIgnoreCase("dropanvil")){
-                dropAnvilHandler(sender);
-                return true;
-            }
-            return false;
-        }
     }
 }
