@@ -1,20 +1,20 @@
 package src.main.java.com.m196.projects.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.block.Block;
+import org.bukkit.Material;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import src.main.java.com.m196.projects.backend.runcommand;
-
 public class dropanvil implements CommandExecutor {
-    runcommand commandthing = new runcommand(); //use to run commands
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
         if (sender instanceof Player){
-            if (cmd.getName().equalsIgnoreCase("dropanvil")){ //maybe fix if args not work?
+            if (cmd.getName().equalsIgnoreCase("dropanvil")){
                 String target;
                 if (args.length == 0){
                     target = sender.getName();
@@ -30,7 +30,15 @@ public class dropanvil implements CommandExecutor {
     }
     public void dropAnvilHandler(CommandSender sender, String target)
     {
-        sender.sendMessage("May they be anvil'd!"); //This sends a message to the player
-        commandthing.runMinecraftCommand("execute at " + target + " run setblock ~ ~15 ~ anvil", sender);
+        sender.sendMessage("May " + target + " be anvil'd!"); //This sends a message to the player
+        Player targetPlayerObject = Bukkit.getPlayerExact(target);
+        if (targetPlayerObject == null){
+            sender.sendMessage("player not available");
+            return;
+        }
+        Location location = targetPlayerObject.getLocation().add(0, 15, 0);
+        Block block = location.getBlock();
+
+        block.setType(Material.ANVIL);
     }
 }

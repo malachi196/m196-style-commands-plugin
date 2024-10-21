@@ -1,3 +1,5 @@
+src\main\java\com\m196\projects\commands\adminstick.class
 src\main\java\com\m196\projects\commands\dropanvil.class
+src\main\java\com\m196\projects\commands\nm.class
 src\main\java\com\m196\projects\backend\runcommand.class
 src\main\java\com\m196\projects\m196stylecommands.class

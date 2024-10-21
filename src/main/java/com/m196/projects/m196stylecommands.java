@@ -52,6 +52,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import src.main.java.com.m196.projects.commands.dropanvil;
+import src.main.java.com.m196.projects.commands.adminstick;
+import src.main.java.com.m196.projects.commands.nm;
 //to build da jar run 'mvn clean package' to make da jar file
 
 public final class m196stylecommands extends JavaPlugin{
@@ -59,13 +61,15 @@ public final class m196stylecommands extends JavaPlugin{
     @Override
     public void onEnable()
     {
-        logg.info("m196 STYLE COMMANDS IS NOW ONLINE!!!!");
+        logg.info("\"m196-style commands\" IS NOW ONLINE!!!!");
         this.getCommand("dropanvil").setExecutor(new dropanvil());
+        this.getCommand("adminstick").setExecutor(new adminstick());
+        this.getCommand("nm").setExecutor(new nm());
     }
     @Override
     public void onDisable()
     {
-        logg.info("Now shutting down!");
-        logg.info("Bye bye!");
+        logg.info("Now shutting down msc!");
+        logg.info("msc: Bye bye!");
     }
 }
